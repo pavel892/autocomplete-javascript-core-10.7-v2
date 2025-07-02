@@ -1,0 +1,57 @@
+body {
+	background: #E5E5E5;
+}
+
+.app {
+	margin: 0 auto;
+	width: 350px;
+	background: #C4C4C4;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+input {
+	width: 250px;
+	height: 24px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+ul {
+	list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.suggestion-item {
+	width: 250px;
+	height: 20px;
+	background: #E3E3E3;
+	margin: 0 auto;
+	margin-top: 0;
+	padding-left: 5px;
+	border: 1px solid black;
+}
+
+.list-item {
+	width: 235px;
+	height: 50px;
+	padding: 10px;
+	background: #E27BEB;
+	margin: 0 auto;
+	position: relative;
+	border: 1px solid black;
+	line-height: 17px;
+}
+
+.close-btn {
+  color: red;
+  font-size: 32px;
+  margin-left: 8px;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
