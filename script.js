@@ -31,9 +31,9 @@ async function getRepositories(val) {
 }
 
 async function saveRepositories(val) {
-	const repos = await getRepositories(val);
+    const repos = await getRepositories(val);
 
-	if (val.trim() === '') {
+    if (val.trim() === '') {
     	ul.innerHTML = '';
     	return;
     }
@@ -41,7 +41,7 @@ async function saveRepositories(val) {
     ul.innerHTML = '';
 
     const maxItems = 5;
-	let itemsCount = 0;
+    let itemsCount = 0;
 
     repos.forEach(el => {
     	const item = document.createElement('li');
@@ -57,14 +57,9 @@ async function saveRepositories(val) {
 			closeBtn.classList.add('close-btn');
 			listItem.classList.add('list-item');
 
-			function createItemWithNames() {
-				const itemElement = document.createElement('div');
-        		return itemElement;
-			}
-
-			const itemName = createItemWithNames();
-			const itemOwner = createItemWithNames();
-			const itemStars = createItemWithNames();
+			const itemName = document.createElement('div');
+			const itemOwner = document.createElement('div');
+			const itemStars = document.createElement('div');
 			itemName.textContent = `Name: ${el.name}`;
 			itemOwner.textContent = `Owner: ${el.owner.login}`;
 			itemStars.textContent = `Stars: ${el.stargazers_count}`;
@@ -91,7 +86,7 @@ async function saveRepositories(val) {
 
 		appendItems(item);
 
-		 });
+	});
 }
 
 const debouncedFn = debounce(saveRepositories, 300);
